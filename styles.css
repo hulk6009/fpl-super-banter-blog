@@ -41,10 +41,12 @@ h2::before {
   background: linear-gradient(90deg, #8b5cf6, transparent);
 }
 
+/* Section-specific background colors */
 h2:nth-of-type(1) { background-color: #f5f3ff; } /* Champion */
 h2:nth-of-type(2) { background-color: #f0fdf4; } /* Promotions */
 h2:nth-of-type(3) { background-color: #fff1f2; } /* Relegations */
-h2:nth-of-type(4) { background-color: #eff6ff; } /* What's Next */
+h2:nth-of-type(4) { background-color: #fffbeb; } /* Managers of GW */
+h2:nth-of-type(5) { background-color: #eff6ff; } /* What's Next */
 
 p {
   margin-bottom: 1.2rem;
@@ -101,14 +103,20 @@ em {
 }
 
 /* Special styling for relegation list */
-ul:nth-last-of-type(2) li {
+ul:nth-last-of-type(3) li {
   color: #dc2626;
   font-weight: 500;
 }
 
 /* Special styling for promotion list */
-ul:last-of-type li {
+ul:nth-last-of-type(2) li {
   color: #16a34a;
+  font-weight: 500;
+}
+
+/* Gameweek managers list styling */
+ul:last-of-type li {
+  color: #4338ca;
   font-weight: 500;
 }
 
@@ -131,4 +139,16 @@ li strong + 🏆 {
   h2 {
     font-size: 1.4rem;
   }
+}
+
+/* Special styling for Gameweek numbers */
+li strong + em {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* Emoji decorations */
+h2::after {
+  margin-left: 0.5rem;
 }
